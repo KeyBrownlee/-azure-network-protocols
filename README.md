@@ -36,24 +36,29 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/NbHcBZT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-After creating both Linux and Windows 10 virtual machines, Wireshark is downloaded onto Windows 10 virtual machine
+After creating both Linux and Windows 10 virtual machines, Wireshark is downloaded in Windows 10 virtual machine
 </p>
 <br />
-
 <p>
 <img src="https://i.imgur.com/322oVn8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <img src="https://i.imgur.com/z8SB9ih.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-ICMP filter is applied in Wireshark, and in commandline on Windows 10 virtual machine the private IP address of the Linux virutal machine is pinged. An inbound rule to deny ICMP traffic for the Linux virtual machine is set, and the Windows virtual machine is no longer receiving ICM traffic from the Linux vitual machine
+ICMP filter is applied in Wireshark, and in commandline on Windows 10 virtual machine the private IP address of the Linux virutal machine is pinged. An inbound rule to deny ICMP traffic for the Linux virtual machine is set, and the Windows virtual machine is no longer receiving ICMP traffic from the Linux vitual machine
 </p>
 <br />
-
 <p>
 <img src="https://i.imgur.com/cpmmfK8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 In Wireshark on the Windows virtual machine the filter is changed to SSH, in powershell we then essientially remote ito the Linux virtual machine via SSH
+</p>
+<br />
+<p>
+<img src="https://i.imgur.com/kZNH819.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+In Wireshark on the Windows virtual machine the filter is changed to DNS, in Powershell use "nslookup" followed by any website to discover the public IP addresses assigned to the website that may appear when users are browsing the sites. 
 </p>
 <br />
