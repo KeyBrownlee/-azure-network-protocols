@@ -26,36 +26,34 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>High-Level Steps</h2>
 
 - Create a Windows 10 virtual machine and a Linux virtual machine
-- Observe ICMP traffic
-  a.install Wireshark on Windows 10 VM, filter for ICMP traffic only, ping the private IP address of the Linux VM 
-  b.Open Network Security Group settings on Linux VM and disable incoming ICMP traffic
-- Observe SSH traffic
-   a.from Windows 10 VM "SSH into" Linux VM using private IP address, type commands and observe traffic in wireshark 
-- Oberve DNS traffic
-   a. In Windows 10 VM filter for DNS traffic only, in a command line nslookup a random website and observe the IP addresses being displayed 
+- Observe ICMP traffic: Install Wireshark on Windows 10 VM, filter for ICMP traffic only, ping the private IP address of the Linux VM. Open Network Security Group settings on Linux VM and disable incoming ICMP traffic
+- Observe SSH traffic: From Windows 10 VM "SSH into" Linux VM using private IP address, type commands and observe traffic in wireshark
+-  Oberve DNS traffic: In Windows 10 VM filter for DNS traffic only, in a command line nslookup a random website and observe the IP addresses being displayed 
 
 <h2>Actions and Observations</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/NbHcBZT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After creating both Linux and Windows 10 virtual machines, Wireshark is downloaded onto Windows 10 virtual machine
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/322oVn8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<img src="https://i.imgur.com/z8SB9ih.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+ICMP filter is applied in Wireshark, and in commandline on Windows 10 virtual machine the private IP address of the Linux virutal machine is pinged. An inbound rule to deny ICMP traffic for the Linux virtual machine is set, and the Windows virtual machine is no longer receiving ICM traffic from the Linux vitual machine
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/cpmmfK8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+In Wireshark on the Windows virtual machine the filter is changed to SSH, in powershell we then essientially remote ito the Linux virtual machine via SSH
 </p>
 <br />
